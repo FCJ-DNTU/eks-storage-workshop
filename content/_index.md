@@ -1,44 +1,48 @@
 +++
-title = "Setting up an AWS account"
-date = 2021
+title = "Persistent Storage on Amazon EKS"
+date = 2024
 weight = 1
 chapter = false
 +++
 
-# Creating your first AWS account
+# Persistent Storage on Amazon EKS
+
+![architecture](/images/1-introduction/1.1.png)
 
 #### Overview
-In this first lab, you will be creating your new **AWS** account and use Multi-factor Authentication (**MFA**) to improve your account security. Next, you will create an **Administrator Group** and **Admin User** to manage access to resources in your account instead of using the root user. \
-Finally, we will step through account authentication with **AWS Support** in the event you experience authentication problems.
 
-#### AWS Account
-**An AWS account** is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the _root user_.
+In this workshop, you will learn how to integrate two AWS storage services, **Amazon EBS** and **Amazon EFS**, as persistent storage solutions for your **Amazon EKS** cluster. These services provide the foundation for scalable, reliable, and durable storage solutions for containerized applications.
 
-{{% notice note%}}
-As a best practice, do not use the AWS account _root user_ for any task where it's not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account's users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.
-{{% /notice%}}
+#### Amazon EBS
 
-#### Multi-Factor Authentication (MFA)
-**MFA** adds extra security because it requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their regular sign-in credentials when they access AWS websites or services.
+**Amazon Elastic Block Store (EBS)** is a high-performance block storage service optimized for workloads requiring high throughput and transactional intensity. This service allows attaching storage volumes to EC2 instances and Kubernetes pods, providing persistent storage for data-intensive applications.
 
-#### IAM User Group 
-An **IAM user group** is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. Any user in that user group automatically has the permissions that are assigned to the user group. 
+#### Amazon EFS
 
-#### IAM User
-An **IAM user** is an entity that you create in AWS to represent the person or application that uses it to interact with AWS. A user in AWS consists of a name and credentials. \
-Please note that an IAM user with administrator permissions is not the same thing as the AWS account root user.
+**Amazon Elastic File System (EFS)** is a fully managed, scalable, and elastic file system. It is ideal for workloads such as big data analytics, web serving, content management, development and testing, and media workflows. EFS automatically replicates data across multiple **Availability Zones** to ensure high availability.
 
+{{% notice note %}}
+To configure optimal storage for your EKS cluster, it is essential to understand Kubernetes concepts such as Persistent Volumes (PV), Persistent Volume Claims (PVC), and Storage Classes. This workshop will guide you step-by-step through these concepts.
+{{% /notice %}}
 
-#### AWS Support
-AWS Basic Support offers all AWS customers access to our Resource Center, Service Health Dashboard, Product FAQs, Discussion Forums, and Support for Health Checks – at no additional charge. Customers who desire a deeper level of support can subscribe to AWS Support at the Developer, Business, or Enterprise level.
+#### Kubernetes Storage Concepts
 
-Customers who choose AWS Support gain one-on-one, fast-response support from AWS engineers. The service helps customers use AWS's products and features. With pay-by-the-month pricing and unlimited support cases, customers are freed from long-term commitments. Customers with operational issues or technical questions can contact a team of support engineers and receive predictable response times and personalized support.
+- **Persistent Volumes (PV):** A storage resource in Kubernetes created manually or dynamically. PVs have a lifecycle independent of any pod.
+- **Persistent Volume Claims (PVC):** A user request for storage that binds to a PV. PVC specifies storage capacity and access modes (e.g., ReadWriteOnce, ReadOnlyMany, ReadWriteMany).
+- **Storage Classes:** Define different types of storage, often linked to quality of service levels or backup policies.
+- **Dynamic Volume Provisioning:** Automatically provisions storage upon user request, eliminating the need for manual setup by administrators.
 
+#### Workshop Focus
 
-#### Main Content
+This workshop focuses on integrating **Amazon EBS** and **Amazon EFS** with your EKS cluster through:
 
-1. [Creating a new AWS Account](1-create-new-aws-account/)
-2. [Setting up MFA for the AWS Account root user](2-MFA-Setup-For-AWS-User-(root))
-3. [Creating an Administrator Accounts and Groups](3-create-admin-user-and-group/)
-4. [Getting support for Account Authentication](4-verify-new-account/)
-<!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
+- **Static Provisioning:** Manual storage configuration.
+- **Dynamic Provisioning:** Automatically provisioned storage based on user requests.
+
+#### Workshop Content
+
+1. [Introduction to Amazon EBS and EFS](1-introduction/)
+2. [Prerequisites](2-prerequisites/)
+3. [EKS with Amazon EBS](3-ebs/)
+4. [EKS with Amazon EFS](4-efs/)
+5. [Resource Cleanup](5-cleanup/)
