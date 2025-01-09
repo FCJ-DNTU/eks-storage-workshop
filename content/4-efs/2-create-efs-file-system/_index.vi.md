@@ -1,10 +1,10 @@
----
-title: "Tạo EFS File System"
-date: "`r Sys.Date()`"
-weight: 2
-chapter: false
-pre: " <b> 4.2 </b> "
----
++++  
+title = "Tạo EFS File System"  
+date = 2024  
+weight = 2  
+chapter = false  
+pre = "4.2"  
++++
 
 Amazon EFS CSI driver hổ trợ cung cấp động và tĩnh. Hiện tại, Cung cấp động tạo một điểm truy cập cho mỗi PV. Điều này có nghĩa là một Amazon EFS phải được tạo thủ công trên AWS trước tiên và nên được cung cấp như dữ liệu đầu vào cho thông số của Storage Class. Với cung cấp tĩnh, Amazon EFS cần được tạo thử công trên AWS trước. Sau đó, nó có thể được gắn vào bên trong một container như là một ổ đĩa sử dụng trình điều khiển.
 

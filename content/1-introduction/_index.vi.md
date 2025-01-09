@@ -5,6 +5,8 @@ weight = 1
 chapter = false
 +++
 
+Ở bài trước chúng ta triển khai ở trong VPC riêng do phải triển khai K8S Cluster, nhưng trong bài này chúng ta sẽ thực hành chủ yếu trên EKS, nên để làm nhanh phần này thì mình sẽ triển khai EC2 ở trong VPC mặc định
+
 Trong phần này, chúng ta sẽ giới thiệu về khái niệm lưu trữ bền vững trên Amazon Elastic Kubernetes Service (EKS). Lưu trữ bền vững rất quan trọng đối với các ứng dụng Kubernetes cần lưu trữ dữ liệu vượt qua vòng đời của các container hoặc pod riêng lẻ. Chúng ta sẽ tập trung vào hai dịch vụ AWS tích hợp liền mạch với EKS để cung cấp các giải pháp lưu trữ mở rộng và đáng tin cậy: **Amazon Elastic Block Store (EBS)** và **Amazon Elastic File System (EFS)**.
 
 #### Amazon EBS (Elastic Block Store)

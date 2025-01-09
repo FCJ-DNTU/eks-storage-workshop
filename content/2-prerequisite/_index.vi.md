@@ -29,4 +29,4 @@ Trong phần này, chúng ta sẽ thiết lập các dịch vụ cần thiết �
 1. [Cấu hình môi trường thực hiện](2-prerequisite/1-prepare-lab-enviroment)
 2. [Tạo IAM Role](2-prerequisites/2-create-iam-role)
 3. [Cài đặt thư viên](2-prerequisites/3-installation)
-4. [Cấu hình cụm EKS](4-prerequisites/4-create-eks-cluster)
+4. [Cấu hình cụm EKS](2-prerequisites/4-create-eks-cluster)

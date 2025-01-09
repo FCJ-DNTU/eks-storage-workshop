@@ -30,4 +30,4 @@ In this section, we will set up the necessary services for deploying the lab. Th
 1. [Configure the Execution Environment](2-prerequisite/1-prepare-lab-enviroment)
 2. [Create IAM Role](2-prerequisites/2-create-iam-role)
 3. [Install Necessary Libraries](2-prerequisites/3-installation)
-4. [Configure EKS Cluster](4-prerequisites/4-create-eks-cluster)
+4. [Configure EKS Cluster](2-prerequisites/4-create-eks-cluster)

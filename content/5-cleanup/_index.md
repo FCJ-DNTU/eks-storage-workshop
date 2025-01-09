@@ -1,11 +1,11 @@
----
-title: "Clean up resources"
-date: "`r Sys.Date()`"
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
----
 
++++  
+title = "Clean up resources"  
+date = 2024  
+weight = 5 
+chapter = false  
+pre = "5."  
++++
 ### Delete EKS Cluster
 
 1. Execute the following command to delete the EKS cluster.
