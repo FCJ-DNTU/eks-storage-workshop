@@ -1,11 +1,10 @@
----
-title: "Cài đặt Amazon EFS CSI Driver"
-date: "`r Sys.Date()`"
-weight: 1
-chapter: false
-pre: " <b> 4.1 </b> "
----
-
++++  
+title = "Cài đặt Amazon EFS CSI Drive"  
+date = 2024  
+weight = 1  
+chapter = false  
+pre = "4.1"  
++++
 ### Tạo IAM Role
 
 Amazon EFS CSI driver yêu cầu quyền IAM để tương tác với hệ thống tệp của bạn. Tạo vai trò IAM và đính kèm chính sách được quản lý AWS cần thiết vào vai trò đó.

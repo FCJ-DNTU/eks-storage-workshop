@@ -1,10 +1,10 @@
----
-title: "Create EFS File System"
-date: "`r Sys.Date()`"
-weight: 2
-chapter: false
-pre: " <b> 4.2 </b> "
----
++++  
+title = "Create EFS File System"  
+date = 2024  
+weight = 2  
+chapter = false  
+pre = "4.2"  
++++
 
 The Amazon EFS CSI driver supports both dynamic and static provisioning. Currently, Dynamic Provisioning creates an access point for each PV. This means that an Amazon EFS must be manually created on AWS first and should be provided as input to the Storage Class parameter. With static provisioning, an Amazon EFS must be manually created on AWS first. It can then be mounted inside a container as a volume using the driver.
 

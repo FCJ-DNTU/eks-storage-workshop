@@ -5,6 +5,8 @@ weight = 1
 chapter = false
 +++
 
+In the previous article, we deployed in a separate VPC because we had to deploy K8S Cluster, but in this article we will practice mainly on EKS, so to do this part quickly, I will deploy EC2 in the default VPC.
+
 In this section, we will introduce the concept of persistent storage on Amazon Elastic Kubernetes Service (EKS). Persistent storage is crucial for Kubernetes applications that need to store data beyond the lifecycle of individual containers or pods. We'll focus on two AWS services that integrate seamlessly with EKS to provide scalable and reliable storage solutions: **Amazon Elastic Block Store (EBS)** and **Amazon Elastic File System (EFS)**.
 
 #### Amazon EBS (Elastic Block Store)

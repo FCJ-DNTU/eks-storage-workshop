@@ -1,10 +1,10 @@
----
-title: "Dynamic Provisioning"
-date: "`r Sys.Date()`"
-weight: 4
-chapter: false
-pre: " <b> 4.4 </b> "
----
++++  
+title = "Dynamic Provisioning"  
+date = 2024  
+weight = 4 
+chapter = false  
+pre = "4.4"  
++++
 
 ### Creating Manifest Files
 

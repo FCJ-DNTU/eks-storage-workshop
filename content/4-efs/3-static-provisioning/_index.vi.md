@@ -1,10 +1,10 @@
----
-title: "Cung cấp tĩnh"
-date: "`r Sys.Date()`"
-weight: 3
-chapter: false
-pre: " <b> 4.3 </b> "
----
++++  
+title = "Cung cấp tĩnh"  
+date = 2024  
+weight = 3  
+chapter = false  
+pre = "4.3"  
++++
 
 ### Lưu trữ các tài nguyên hiện tại.
 

@@ -1,11 +1,11 @@
----
-title: "Static Provisioning"
-date: "`r Sys.Date()`"
-weight: 3
-chapter: false
-pre: " <b> 4.3 </b> "
----
 
++++  
+title = "Static Provisioning"  
+date = 2024  
+weight = 3  
+chapter = false  
+pre = "4.3"  
++++
 ### Storing current resources.
 
 1. Create a directory named **EBS** to store the resources of the **EBS** section.

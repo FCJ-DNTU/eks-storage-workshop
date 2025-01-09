@@ -1,10 +1,10 @@
----
-title: "Dọn dẹp tài nguyên"
-date: "`r Sys.Date()`"
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
----
++++  
+title = "Dọn dẹp tài nguyên"  
+date = 2024  
+weight = 5 
+chapter = false  
+pre = "5."  
++++
 
 ### Xóa EKS Cluster
 
